@@ -1,6 +1,5 @@
 #include "quadratic.h"
 #include <cmath>
-#include <iomanip>
 #include <stdexcept>
 #include <iostream>
 
@@ -30,8 +29,8 @@ double QuadraticEquation::_discriminant() const{
 }
 
 void QuadraticEquation::_check_a() const{
-    if ((a <= THRESHOLD) && (a >= -THRESHOLD)){
-        throw std::invalid_argument("a is near zero.");
+    if (a == 0.0){
+        throw std::invalid_argument("a must be nonzero.");
     }
 }
 
@@ -55,11 +54,11 @@ void QuadraticEquation::solve() const{
         std::cout << "No real solution..." << "\n";
     }
     else if(discriminant <= THRESHOLD){
-        std::cout << "Unique solution: " << -b / (2*a) << std::setprecision(3) << "\n";
+        std::cout << "Unique solution: " << -b / (2*a) << "\n";
     }
     else{
         std::cout << "Solution 1: " << (-b+std::sqrt(discriminant)) / (2*a)  
                   << "; Solution 2: " << (-b-std::sqrt(discriminant)) / (2*a) 
-                  << std::setprecision(3) << "\n";
+                  << "\n";
     }
 }

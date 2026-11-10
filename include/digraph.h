@@ -5,6 +5,8 @@
 #include <list>
 #include <vector>
 #include <sstream>
+#include <tuple>
+#include <unordered_map>
 using namespace std;
 
 class Digraph {
@@ -26,7 +28,11 @@ class Digraph {
   // exactly the vertices j  for which (j,i) is an edge
   vector<vector<int>> in_neighbors;
   
-  void BFS(int s0);
+  // Reuse one BFS result for queries with the same starting point.
+  // Each record stores the path's vertex count and the previous vertex.
+  mutable std::unordered_map<int, std::vector<std::tuple<int, int>>> parents_map;
+  
+  void BFS(int s0) const;  // Fill the cached parent records.
 
  public:
   Digraph() : n(0), m(0) {}   // Default constructor
@@ -43,6 +49,8 @@ class Digraph {
   inline int vertices() const { return n; };          // returns n
   inline int edges() const { return m; };             // returns m
   void print() const;            // print all edges to the screen
+  
+  
   vector<int> path(int v, int w) const;
   // return shortest directed path from v to w (if existent);
   // return empty vector if no such path exists

@@ -3,11 +3,27 @@
 #include <iomanip>
 #include <algorithm>
 #include <sstream>
+#include <cmath>
+#include <functional>
+#include <utility>
+
+std::size_t Matrix::_entry_count(int rows, int columns) {
+    if (rows < 0 || columns < 0)
+        throw std::invalid_argument("Matrix dimensions must be nonnegative.");
+    const auto row_count = static_cast<std::size_t>(rows);
+    const auto column_count = static_cast<std::size_t>(columns);
+    if (column_count != 0 && row_count > std::vector<double>().max_size() / column_count)
+        throw std::length_error("Matrix dimensions are too large.");
+    return row_count * column_count;
+}
 
 Matrix::Matrix(): n(0), m(0), entries(0) {}  
-Matrix::Matrix(int _n, int _m): n(_n), m(_m), entries(n*m) {};
-Matrix::Matrix(int _n, int _m, double val): n(_n), m(_m), entries(n*m, val) {};
-Matrix::Matrix(int _n, int _m, std::vector<double> vd): n(_n), m(_m), entries(vd) {};
+Matrix::Matrix(int _n, int _m): Matrix(_n, _m, 0.0) {}
+Matrix::Matrix(int _n, int _m, double val): n(_n), m(_m), entries(_entry_count(n, m), val) {}
+Matrix::Matrix(int _n, int _m, std::vector<double> vd): n(_n), m(_m), entries(std::move(vd)) {
+    if (entries.size() != _entry_count(n, m))
+        throw std::invalid_argument("Matrix dimensions and entry count must agree.");
+}
 Matrix::Matrix(const Matrix& B) : n(B.n), m(B.m), entries(B.entries) {}
 
 Matrix& Matrix::operator=(const Matrix& B){
@@ -15,9 +31,9 @@ Matrix& Matrix::operator=(const Matrix& B){
         return *this;
     }
     
+    entries = B.entries;
     n = B.n;
     m = B.m;
-    entries = B.entries;
     return *this;
 }
 
@@ -28,7 +44,7 @@ std::string Matrix::_to_string() const{
     std::stringstream oss;
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <= m; ++j) {
-            oss << std::setw(10) << get_entry(i, j) << " ";
+            oss << std::setw(8) << get_entry(i, j) << " ";
         }
         oss << "\n";
     }
@@ -54,9 +70,8 @@ Matrix Matrix::operator+(const Matrix& B) const{
     }
     
     Matrix result(n, m);
-    for (std::size_t i = 0; i < entries.size(); ++i){
-        result.entries[i] = entries[i] + B.entries[i];
-    }
+    std::transform(entries.begin(), entries.end(), B.entries.begin(),
+                   result.entries.begin(), std::plus<double>{});
                     
     return result;
 }
@@ -68,9 +83,8 @@ Matrix Matrix::operator-(const Matrix& B) const{
     }
     
     Matrix result(n, m);
-    for (std::size_t i = 0; i < entries.size(); ++i){
-        result.entries[i] = entries[i] - B.entries[i];
-    }
+    std::transform(entries.begin(), entries.end(), B.entries.begin(),
+                   result.entries.begin(), std::minus<double>{});
                     
     return result;
 }
@@ -104,10 +118,10 @@ bool Matrix::operator==(const Matrix& B) const{
         return false;
     }
     
-    for (size_t k=0; k<entries.size(); ++k){
-        if (std::abs(entries[k] - B.entries[k]) >= 1e-10) return false;
-    }
-    return true;
+    return std::equal(entries.begin(), entries.end(), B.entries.begin(),
+                      [](double a, double b) {
+                          return a == b || std::abs(a - b) < 1e-10;
+                      });
 }
 
 Matrix triple_add(const Matrix& m1, const Matrix& m2, const Matrix& m3){

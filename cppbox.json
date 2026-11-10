@@ -72,33 +72,6 @@
               "children": [],
               "info": {
                 "panel": {
-                  "path": "data/digraph2.txt"
-                }
-              }
-            },
-            {
-              "panel_name": "editor",
-              "children": [],
-              "info": {
-                "panel": {
-                  "path": "src/q1_1.cpp"
-                }
-              }
-            },
-            {
-              "panel_name": "editor",
-              "children": [],
-              "info": {
-                "panel": {
-                  "path": "include/questions.h"
-                }
-              }
-            },
-            {
-              "panel_name": "editor",
-              "children": [],
-              "info": {
-                "panel": {
                   "path": "src/matrix.cpp"
                 }
               }
@@ -118,15 +91,6 @@
               "info": {
                 "panel": {
                   "path": "src/main.cpp"
-                }
-              }
-            },
-            {
-              "panel_name": "editor",
-              "children": [],
-              "info": {
-                "panel": {
-                  "path": "src/fraction.cpp"
                 }
               }
             },
@@ -183,11 +147,56 @@
                   "path": "src/matrix_addition_test.cpp"
                 }
               }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "include/point.h"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "include/fraction.h"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "include/digraph.h"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "data/digraph2.txt"
+                }
+              }
+            },
+            {
+              "panel_name": "image",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "D:\\Axel\\Documents\\Axel-Learning\\NTU MFE\\Miniterm 3\\OOP2\\Assignment1\\week1\\data\\digraph_output.jpg"
+                }
+              }
             }
           ],
           "info": {
             "tabs": {
-              "active_index": 18
+              "active_index": 8
             }
           }
         }
@@ -195,7 +204,7 @@
       "info": {
         "stack": {
           "sizes": [
-            410.0
+            570.0
           ],
           "axis": 0
         }
@@ -227,17 +236,17 @@
   "edit_stats": {
     "v": 2,
     "since": "2026-11-07T17:42:38.596Z",
-    "updated": "2026-11-09T10:11:27.315Z",
-    "typed": 15691,
-    "paste_external": 11009,
-    "paste_internal": 7722,
-    "completion": 135,
-    "bulk_other": 1737,
+    "updated": "2026-11-10T17:12:27.727Z",
+    "typed": 21384,
+    "paste_external": 11241,
+    "paste_internal": 9466,
+    "completion": 156,
+    "bulk_other": 2755,
     "refused": 0,
     "refused_chars": 0,
     "import_files": 0,
     "import_bytes": 0,
-    "external_edit_bytes": 1153,
+    "external_edit_bytes": 27084,
     "existing_files": 6,
     "existing_chars": 7487,
     "events": [
@@ -527,6 +536,188 @@
         "chars": 90,
         "file": "src/matrix_addition_test.cpp",
         "line": 47
+      },
+      {
+        "t": "2026-11-10T12:02:13.738Z",
+        "kind": "internal",
+        "chars": 112,
+        "file": "src/fraction_test.cpp",
+        "line": 47
+      },
+      {
+        "t": "2026-11-10T12:44:53.796Z",
+        "kind": "external",
+        "chars": 186,
+        "file": "src/digraph.cpp",
+        "line": 62
+      },
+      {
+        "t": "2026-11-10T12:44:58.835Z",
+        "kind": "bulk",
+        "chars": 433,
+        "file": "src/digraph.cpp",
+        "line": 86
+      },
+      {
+        "t": "2026-11-10T12:45:03.823Z",
+        "kind": "bulk",
+        "chars": 140,
+        "file": "src/digraph.cpp",
+        "line": 71
+      },
+      {
+        "t": "2026-11-10T12:45:09.536Z",
+        "kind": "bulk",
+        "chars": 312,
+        "file": "src/digraph.cpp",
+        "line": 71
+      },
+      {
+        "t": "2026-11-10T16:17:41.806Z",
+        "kind": "internal",
+        "chars": 134,
+        "file": "include/fraction.h",
+        "line": 12
+      },
+      {
+        "t": "2026-11-10T16:18:59.870Z",
+        "kind": "internal",
+        "chars": 134,
+        "file": "include/fraction.h",
+        "line": 22
+      },
+      {
+        "t": "2026-11-10T16:19:25.081Z",
+        "kind": "internal",
+        "chars": 139,
+        "file": "include/fraction.h",
+        "line": 11
+      },
+      {
+        "t": "2026-11-10T16:21:30.235Z",
+        "kind": "internal",
+        "chars": 177,
+        "file": "include/fraction.h",
+        "line": 60
+      },
+      {
+        "t": "2026-11-10T16:21:48.497Z",
+        "kind": "internal",
+        "chars": 151,
+        "file": "include/fraction.h",
+        "line": 70
+      },
+      {
+        "t": "2026-11-10T16:22:03.336Z",
+        "kind": "internal",
+        "chars": 130,
+        "file": "include/fraction.h",
+        "line": 79
+      },
+      {
+        "t": "2026-11-10T16:43:53.475Z",
+        "kind": "external_edit",
+        "chars": 1194,
+        "file": "include/digraph.h",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:43:53.863Z",
+        "kind": "external_edit",
+        "chars": 3747,
+        "file": "src/digraph.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:43:54.827Z",
+        "kind": "external_edit",
+        "chars": 1069,
+        "file": "src/linear_system.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:43:55.275Z",
+        "kind": "external_edit",
+        "chars": 1765,
+        "file": "src/quadratic.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:44:32.295Z",
+        "kind": "external_edit",
+        "chars": 1839,
+        "file": "include/matrix.h",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:44:32.680Z",
+        "kind": "external_edit",
+        "chars": 3957,
+        "file": "src/matrix.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:44:33.213Z",
+        "kind": "external_edit",
+        "chars": 1535,
+        "file": "src/matrix_addition_test.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:44:33.629Z",
+        "kind": "external_edit",
+        "chars": 573,
+        "file": "src/linear_sytem_test.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:45:56.025Z",
+        "kind": "external_edit",
+        "chars": 1042,
+        "file": "include/point.h",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:45:57.060Z",
+        "kind": "external_edit",
+        "chars": 3601,
+        "file": "src/fraction_test.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:46:53.359Z",
+        "kind": "external_edit",
+        "chars": 4371,
+        "file": "src/main.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:49:58.715Z",
+        "kind": "external_edit",
+        "chars": 365,
+        "file": "src/matrix_addition_test.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T16:55:41.230Z",
+        "kind": "external_edit",
+        "chars": 211,
+        "file": "include/matrix.h",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T17:07:31.817Z",
+        "kind": "external_edit",
+        "chars": 193,
+        "file": "src/main.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-10T17:09:20.290Z",
+        "kind": "external_edit",
+        "chars": 409,
+        "file": "src/main.cpp",
+        "line": 0
       }
     ],
     "events_dropped": 0

@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
 #include <iostream>
+#include <stdexcept>
 
-double SarrusDet(const std::vector<double> mat);
+double SarrusDet(const std::vector<double>& mat);
 
 class LinearSystem {
 private:
@@ -14,7 +15,10 @@ private:
     std::vector<double> _replacedA(int j) const;  // Aj
 public:
     LinearSystem(std::vector<double> A, std::vector<double> b):
-    A(A), b(b) {} // Initializes member A from parameter A, member b from parameter b
+    A(A), b(b) {
+        if (A.size() != 9 || b.size() != 3)
+            throw std::invalid_argument("Expected a 3x3 matrix and a length-3 vector.");
+    }
     
     void solve() const;
     // Sets sol to solution of Ax=b if abs(det(A)) > 1e-10

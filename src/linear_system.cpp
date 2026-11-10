@@ -1,7 +1,9 @@
 #include "linear_system.h"
 #include <stdexcept>
+#include <cmath>
+#include <utility>
 
-double SarrusDet(const std::vector<double> mat){
+double SarrusDet(const std::vector<double>& mat){
     if (mat.size() != 9) throw std::invalid_argument("The size of mat should be 9, which means 3x3 matrix");
 
     double positive = mat[0] * mat[4] * mat[8] 
@@ -28,11 +30,14 @@ std::vector<double> LinearSystem::_replacedA(int j) const{
 void LinearSystem::solve() const{
     double detA = SarrusDet(A);
     if (std::abs(detA) <= 1e-10){
+        sol.clear();
         return;
     }
+    std::vector<double> result(3);
     for (size_t i=0; i<3; ++i){
-        sol.push_back(SarrusDet(_replacedA(i)) / detA);
+        result[i] = SarrusDet(_replacedA(static_cast<int>(i))) / detA;
     }
+    sol = std::move(result);
 }
 
 

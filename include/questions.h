@@ -4,7 +4,7 @@
 
 void q1_1();
 void q1_2();
-void run_fraction_test();
+void test_fraction();
 void run_linearsystem_test();
 void run_digragh_test();
 void run_matrix_test();

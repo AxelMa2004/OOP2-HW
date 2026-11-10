@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 
 
 namespace Shape{
@@ -27,13 +28,10 @@ namespace Shape{
             _show_info("Destructor");
         }
         
-        // Assignment Operator
-        Point& operator = (const Point& other){
+        // The reference version for comparison is operator=(const Point& other).
+        // Question 1-1 also asks us to test a by-value parameter.
+        Point& operator = (const Point other){
             _show_info("Assignment operator");
-            
-            if (this == &other){
-                return *this;
-            }
             this -> x = other.x;
             return *this;
         }

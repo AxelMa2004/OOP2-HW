@@ -20,9 +20,9 @@ void run_linearsystem_test(){
     // Instantiate LinearSystem for the first case
     LinearSystem sys1(A1, b1);
     sys1.solve();
-    sys1.print();  // Should print the calculated unique solution vector x[cite: 1]
+    sys1.print();  // Expected solution (1, 2, -1).
 
-    cout << "\n- Test 2: Linear system without a unique solution (det(A) = 0" << endl;
+    cout << "\n- Test 2: Linear system without a unique solution (det(A) = 0)" << endl;
     
     // Construct a 3x3 matrix A with a determinant of 0 (e.g., linearly dependent rows)
     vector<double> A2 = {
@@ -35,5 +35,5 @@ void run_linearsystem_test(){
     // Instantiate LinearSystem for the second case
     LinearSystem sys2(A2, b2);
     sys2.solve();
-    sys2.print();  // Should print a message stating that no unique solution exists[cite: 1]
+    sys2.print();  // Expected message that there is no unique solution.
 }

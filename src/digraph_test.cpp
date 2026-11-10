@@ -19,7 +19,7 @@ void run_digragh_test() {
   G.read("data/digraph2.txt");
   cout << '\n';
   cout << "Shortest directed paths from 1 to 91,...,100 in G2:\n";
-  /*
+
   for (int w = 91; w <= 100; w++) {
     vector<int> path = G.path(1, w);
     if (path.size() == 0)
@@ -28,6 +28,6 @@ void run_digragh_test() {
       cout << path[i] << " ";
     cout << '\n';
   }
-  */
+
 
 }

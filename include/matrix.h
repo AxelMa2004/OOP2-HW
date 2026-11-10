@@ -5,6 +5,8 @@
 #include <numeric>
 #include <vector>
 #include <ostream>
+#include <stdexcept>
+#include <string>
 
 using namespace std;
 
@@ -16,6 +18,7 @@ class Matrix {
                            // is entries[(i-1)*m + j-1]
                            
   std::string _to_string() const;
+  static std::size_t _entry_count(int rows, int columns);
  public:
   // constructors to support following creation.
   // Matrix A1(2, 2, {1, 2, 3, 4});
@@ -40,16 +43,24 @@ class Matrix {
   // Matrix A2(2, 2, vd);
   explicit Matrix(int _n, int _m, std::vector<double> vd);
  
-  Matrix(const Matrix& B);  // copy constructor, do we need to define it?
+  Matrix(const Matrix& B);  // Optional. vector already provides a deep copy.
 
-  Matrix& operator=(const Matrix& B);  // assignment operator, do we need to define it?
+  Matrix& operator=(const Matrix& B);  // Optional. Member-wise assignment is sufficient.
 
-  ~Matrix();  // destructor, do we need to define it? Actually no need. 
+  ~Matrix();  // Optional. The vector member releases its own memory.
 
   inline int rows() const { return n; }                        // returns n
   inline int columns() const { return m; }                     // returns m
-  inline double get_entry(int i, int j) const { return entries[(i-1)*m + j-1]; }    // returns the (i,j)-entry
-  inline void set_entry(int i, int j, double x) { entries[(i-1)*m + j-1] = x; }  // sets (i,j)-entry to x
+  inline double get_entry(int i, int j) const {
+    if (i < 1 || i > n || j < 1 || j > m)
+      throw std::out_of_range("Invalid matrix coordinates.");
+    return entries[static_cast<std::size_t>(i - 1) * m + j - 1];
+  }
+  inline void set_entry(int i, int j, double x) {
+    if (i < 1 || i > n || j < 1 || j > m)
+      throw std::out_of_range("Invalid matrix coordinates.");
+    entries[static_cast<std::size_t>(i - 1) * m + j - 1] = x;
+  }
   
   void print() const;                      // prints matrix to the screen row-wise
 

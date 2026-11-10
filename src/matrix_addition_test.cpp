@@ -5,6 +5,7 @@
 #include <cstddef>
 #include <random>
 #include <stdexcept>
+#include <algorithm>
 
 
 std::vector<double> random_vector(
@@ -17,37 +18,40 @@ std::vector<double> random_vector(
     std::uniform_real_distribution<double> distribution(min_value, max_value);
 
     std::vector<double> values(size);
-    for (double& value : values) {
-        value = distribution(generator);
-    }
+    std::generate(values.begin(), values.end(), [&] {
+        return distribution(generator);
+    });
     return values;
 }
 
 void run_matrix_addition_test(){
-    // Generate 3 random vectors of size 100 * 100
+    // Generate three inputs for 1000 x 1000 matrices.
     int m = 1000;
     int n = 1000;
-    size_t N = m * n;
+    size_t N = static_cast<std::size_t>(m) * n;
     std::vector<double> v1 = random_vector(N);
     std::vector<double> v2 = random_vector(N);
     std::vector<double> v3 = random_vector(N);
     
-    // Construct 3 different matrix
+    // Construct three different matrices.
     Matrix m1(m, n, v1);
-    Matrix m2(m, n, v1);
-    Matrix m3(m, n, v1);
+    Matrix m2(m, n, v2);
+    Matrix m3(m, n, v3);
     
     Matrix operator_adding_mat(m, n);
     Matrix function_adding_mat(m, n);
     
+    const std::size_t test_times = 100;
+    
     {
         Timer tt("operator addition");
-        operator_adding_mat = m1+m2+m3;
+        for (size_t i=0; i < test_times; ++i) operator_adding_mat = m1+m2+m3;
     }
     
     {
         Timer tt("function addition");
-        function_adding_mat = triple_add(m1, m2, m3);
+        for (size_t i=0; i < test_times; ++i) function_adding_mat = triple_add(m1, m2, m3);
+        
     }
     
     std::cout << "If identical: " << 
