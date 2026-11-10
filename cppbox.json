@@ -1,0 +1,535 @@
+{
+  "submit_key": "cbx_week1_a51447feeabcc4799f3e4b3399abf85e29069f219b2223c582b4a150202c52aa",
+  "submit_key_history": [
+    {
+      "key": "cbx_week1_a51447feeabcc4799f3e4b3399abf85e29069f219b2223c582b4a150202c52aa",
+      "assignment": "week1",
+      "set_at": "2026-11-07T17:33:03.102Z"
+    }
+  ],
+  "dock_layout": {
+    "version": 1,
+    "center": {
+      "panel_name": "StackPanel",
+      "children": [
+        {
+          "panel_name": "TabPanel",
+          "children": [
+            {
+              "panel_name": "welcome",
+              "children": [],
+              "info": {
+                "panel": null
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "include/matrix.h"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/matrix_test.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/quadratic.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/digraph_test.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/digraph.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "data/digraph2.txt"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/q1_1.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "include/questions.h"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/matrix.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "include/quadratic.h"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/main.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/fraction.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/q1_2.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/fraction_test.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/linear_system.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/linear_sytem_test.cpp"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "include/timer.h"
+                }
+              }
+            },
+            {
+              "panel_name": "editor",
+              "children": [],
+              "info": {
+                "panel": {
+                  "path": "src/matrix_addition_test.cpp"
+                }
+              }
+            }
+          ],
+          "info": {
+            "tabs": {
+              "active_index": 18
+            }
+          }
+        }
+      ],
+      "info": {
+        "stack": {
+          "sizes": [
+            410.0
+          ],
+          "axis": 0
+        }
+      }
+    },
+    "left_dock": {
+      "panel": {
+        "panel_name": "TabPanel",
+        "children": [
+          {
+            "panel_name": "tree",
+            "children": [],
+            "info": {
+              "panel": null
+            }
+          }
+        ],
+        "info": {
+          "tabs": {
+            "active_index": 0
+          }
+        }
+      },
+      "placement": "left",
+      "size": 240.0,
+      "open": true
+    }
+  },
+  "edit_stats": {
+    "v": 2,
+    "since": "2026-11-07T17:42:38.596Z",
+    "updated": "2026-11-09T10:11:27.315Z",
+    "typed": 15691,
+    "paste_external": 11009,
+    "paste_internal": 7722,
+    "completion": 135,
+    "bulk_other": 1737,
+    "refused": 0,
+    "refused_chars": 0,
+    "import_files": 0,
+    "import_bytes": 0,
+    "external_edit_bytes": 1153,
+    "existing_files": 6,
+    "existing_chars": 7487,
+    "events": [
+      {
+        "t": "2026-11-07T17:44:49.888Z",
+        "kind": "external",
+        "chars": 282,
+        "file": "src/q1_1.cpp",
+        "line": 7
+      },
+      {
+        "t": "2026-11-07T17:45:17.377Z",
+        "kind": "internal",
+        "chars": 202,
+        "file": "src/q1_1.cpp",
+        "line": 7
+      },
+      {
+        "t": "2026-11-07T17:45:20.284Z",
+        "kind": "bulk",
+        "chars": 228,
+        "file": "src/q1_1.cpp",
+        "line": 7
+      },
+      {
+        "t": "2026-11-07T17:45:36.757Z",
+        "kind": "internal",
+        "chars": 202,
+        "file": "src/q1_1.cpp",
+        "line": 11
+      },
+      {
+        "t": "2026-11-07T18:04:29.311Z",
+        "kind": "external",
+        "chars": 1872,
+        "file": "Makefile",
+        "line": 1
+      },
+      {
+        "t": "2026-11-07T18:05:25.604Z",
+        "kind": "external",
+        "chars": 1804,
+        "file": "Makefile",
+        "line": 1
+      },
+      {
+        "t": "2026-11-07T18:25:19.351Z",
+        "kind": "internal",
+        "chars": 234,
+        "file": "src/matrix.cpp",
+        "line": 7
+      },
+      {
+        "t": "2026-11-07T18:38:43.975Z",
+        "kind": "external",
+        "chars": 218,
+        "file": "src/matrix.cpp",
+        "line": 14
+      },
+      {
+        "t": "2026-11-07T18:42:56.650Z",
+        "kind": "internal",
+        "chars": 382,
+        "file": "src/matrix.cpp",
+        "line": 41
+      },
+      {
+        "t": "2026-11-07T18:45:22.170Z",
+        "kind": "external",
+        "chars": 125,
+        "file": "src/matrix.cpp",
+        "line": 54
+      },
+      {
+        "t": "2026-11-07T19:00:18.687Z",
+        "kind": "internal",
+        "chars": 187,
+        "file": "src/matrix.cpp",
+        "line": 29
+      },
+      {
+        "t": "2026-11-07T19:04:50.641Z",
+        "kind": "external",
+        "chars": 325,
+        "file": "src/matrix.cpp",
+        "line": 85
+      },
+      {
+        "t": "2026-11-07T19:13:48.489Z",
+        "kind": "external",
+        "chars": 325,
+        "file": "include/quadratic.h",
+        "line": 3
+      },
+      {
+        "t": "2026-11-08T06:52:52.617Z",
+        "kind": "internal",
+        "chars": 131,
+        "file": "src/quadratic.cpp",
+        "line": 10
+      },
+      {
+        "t": "2026-11-08T07:12:31.823Z",
+        "kind": "external",
+        "chars": 581,
+        "file": "src/q1_2.cpp",
+        "line": 6
+      },
+      {
+        "t": "2026-11-08T07:12:35.816Z",
+        "kind": "bulk",
+        "chars": 664,
+        "file": "src/q1_2.cpp",
+        "line": 6
+      },
+      {
+        "t": "2026-11-08T07:14:51.452Z",
+        "kind": "external",
+        "chars": 377,
+        "file": "include/fraction.h",
+        "line": 8
+      },
+      {
+        "t": "2026-11-08T07:14:53.539Z",
+        "kind": "bulk",
+        "chars": 369,
+        "file": "include/fraction.h",
+        "line": 9
+      },
+      {
+        "t": "2026-11-08T17:19:37.154Z",
+        "kind": "internal",
+        "chars": 1594,
+        "file": "src/digraph.cpp",
+        "line": 3
+      },
+      {
+        "t": "2026-11-08T17:46:58.826Z",
+        "kind": "external",
+        "chars": 90,
+        "file": "src/digraph.cpp",
+        "line": 26
+      },
+      {
+        "t": "2026-11-08T18:18:18.861Z",
+        "kind": "external_edit",
+        "chars": 1148,
+        "file": "src/digraph.cpp",
+        "line": 0
+      },
+      {
+        "t": "2026-11-08T18:25:49.091Z",
+        "kind": "internal",
+        "chars": 809,
+        "file": "src/digraph.cpp",
+        "line": 59
+      },
+      {
+        "t": "2026-11-09T06:09:12.552Z",
+        "kind": "external",
+        "chars": 145,
+        "file": "src/fraction.cpp",
+        "line": 20
+      },
+      {
+        "t": "2026-11-09T06:14:23.981Z",
+        "kind": "internal",
+        "chars": 107,
+        "file": "src/fraction.cpp",
+        "line": 8
+      },
+      {
+        "t": "2026-11-09T06:32:19.587Z",
+        "kind": "external",
+        "chars": 566,
+        "file": "include/linear_system.h",
+        "line": 4
+      },
+      {
+        "t": "2026-11-09T08:27:44.101Z",
+        "kind": "external",
+        "chars": 139,
+        "file": "src/linear_system.cpp",
+        "line": 8
+      },
+      {
+        "t": "2026-11-09T08:27:55.196Z",
+        "kind": "external",
+        "chars": 139,
+        "file": "src/linear_system.cpp",
+        "line": 11
+      },
+      {
+        "t": "2026-11-09T08:28:03.142Z",
+        "kind": "bulk",
+        "chars": 248,
+        "file": "src/linear_system.cpp",
+        "line": 8
+      },
+      {
+        "t": "2026-11-09T09:13:07.193Z",
+        "kind": "external",
+        "chars": 1134,
+        "file": "src/linear_sytem_test.cpp",
+        "line": 6
+      },
+      {
+        "t": "2026-11-09T09:27:18.746Z",
+        "kind": "external",
+        "chars": 90,
+        "file": "include/timer.h",
+        "line": 3
+      },
+      {
+        "t": "2026-11-09T09:27:29.613Z",
+        "kind": "external",
+        "chars": 203,
+        "file": "include/timer.h",
+        "line": 8
+      },
+      {
+        "t": "2026-11-09T09:41:17.026Z",
+        "kind": "external",
+        "chars": 540,
+        "file": "include/timer.h",
+        "line": 28
+      },
+      {
+        "t": "2026-11-09T09:51:55.911Z",
+        "kind": "internal",
+        "chars": 377,
+        "file": "src/matrix.cpp",
+        "line": 103
+      },
+      {
+        "t": "2026-11-09T09:52:40.474Z",
+        "kind": "internal",
+        "chars": 166,
+        "file": "src/matrix.cpp",
+        "line": 106
+      },
+      {
+        "t": "2026-11-09T09:54:59.087Z",
+        "kind": "external",
+        "chars": 496,
+        "file": "src/matrix_addition_test.cpp",
+        "line": 6
+      },
+      {
+        "t": "2026-11-09T09:55:53.376Z",
+        "kind": "external",
+        "chars": 266,
+        "file": "src/matrix.cpp",
+        "line": 103
+      },
+      {
+        "t": "2026-11-09T09:56:22.917Z",
+        "kind": "external",
+        "chars": 189,
+        "file": "src/matrix.cpp",
+        "line": 111
+      },
+      {
+        "t": "2026-11-09T10:04:00.724Z",
+        "kind": "internal",
+        "chars": 124,
+        "file": "src/matrix.cpp",
+        "line": 103
+      },
+      {
+        "t": "2026-11-09T10:05:20.445Z",
+        "kind": "internal",
+        "chars": 179,
+        "file": "src/matrix.cpp",
+        "line": 70
+      },
+      {
+        "t": "2026-11-09T10:07:52.753Z",
+        "kind": "external",
+        "chars": 81,
+        "file": "include/timer.h",
+        "line": 18
+      },
+      {
+        "t": "2026-11-09T10:08:29.042Z",
+        "kind": "internal",
+        "chars": 90,
+        "file": "src/matrix_addition_test.cpp",
+        "line": 47
+      }
+    ],
+    "events_dropped": 0
+  },
+  "backend": "native"
+}
